@@ -59,7 +59,7 @@ public class DepartmentServiceImpl implements  DepartmentService{
 
     @Override
     public DepartmentEntity getdataname(String departmentName) {
-         return departmentrepository.findBydepartmentName(departmentName);
+         return departmentrepository.findBydepartmentNameIgnoreCase(departmentName);
     }
 
 
