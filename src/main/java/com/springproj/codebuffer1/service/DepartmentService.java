@@ -16,4 +16,6 @@ public interface DepartmentService {
    public  void deletedata(long id);
 
    public  DepartmentEntity updatedata(long id, DepartmentEntity entity);
+
+   public  DepartmentEntity getdataname(String departmentName);
 }

@@ -41,5 +41,10 @@ public class DepartmentController {
     public DepartmentEntity updatedata(@PathVariable long id, @RequestBody DepartmentEntity entity){
         return departmentService.updatedata(id,entity);
     }
+    @GetMapping("/getdata/name/{departmentName}")
+    public DepartmentEntity getdataname(@PathVariable String departmentName)
+    {
+        return departmentService.getdataname(departmentName);
+    }
 
 }
