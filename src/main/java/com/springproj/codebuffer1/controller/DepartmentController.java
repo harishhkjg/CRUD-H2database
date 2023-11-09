@@ -3,6 +3,7 @@ package com.springproj.codebuffer1.controller;
 
 import com.springproj.codebuffer1.entity.DepartmentEntity;
 import com.springproj.codebuffer1.service.DepartmentService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,8 +15,10 @@ public class DepartmentController {
     @Autowired
     private DepartmentService departmentService;
 
+
+
     @PostMapping("/departments")
-    public DepartmentEntity savedata(@RequestBody DepartmentEntity entity)
+    public DepartmentEntity savedata(@Valid @RequestBody DepartmentEntity entity)
     {
         return departmentService.savedata(entity);
     }
